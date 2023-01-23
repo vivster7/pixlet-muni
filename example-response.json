@@ -1,0 +1,128 @@
+{
+    "ServiceDelivery": {
+        "ResponseTimestamp": "2023-01-21T18:36:46Z",
+        "ProducerRef": "SF",
+        "Status": true,
+        "StopMonitoringDelivery": {
+            "version": "1.4",
+            "ResponseTimestamp": "2023-01-21T18:36:46Z",
+            "Status": true,
+            "MonitoredStopVisit": [
+                {
+                    "RecordedAtTime": "2023-01-21T18:36:40Z",
+                    "MonitoringRef": "13915",
+                    "MonitoredVehicleJourney": {
+                        "LineRef": "N",
+                        "DirectionRef": "IB",
+                        "FramedVehicleJourneyRef": {
+                            "DataFrameRef": "2023-01-21",
+                            "DatedVehicleJourneyRef": "11093382"
+                        },
+                        "PublishedLineName": "JUDAH",
+                        "OperatorRef": "SF",
+                        "OriginRef": "15223",
+                        "OriginName": "Judah/La Playa/Ocean Beach",
+                        "DestinationRef": "15239",
+                        "DestinationName": "Caltrain/Ballpark",
+                        "Monitored": true,
+                        "InCongestion": null,
+                        "VehicleLocation": {
+                            "Longitude": "-122.458473",
+                            "Latitude": "37.7643661"
+                        },
+                        "Bearing": "87.0000000000",
+                        "Occupancy": "seatsAvailable",
+                        "VehicleRef": "1443",
+                        "MonitoredCall": {
+                            "StopPointRef": "13915",
+                            "StopPointName": "Carl St & Stanyan St",
+                            "VehicleLocationAtStop": "",
+                            "VehicleAtStop": "false",
+                            "AimedArrivalTime": "2023-01-21T18:40:19Z",
+                            "ExpectedArrivalTime": "2023-01-21T18:38:39Z",
+                            "AimedDepartureTime": "2023-01-21T18:40:19Z",
+                            "ExpectedDepartureTime": null,
+                            "Distances": ""
+                        }
+                    }
+                },
+                {
+                    "RecordedAtTime": "2023-01-21T18:36:40Z",
+                    "MonitoringRef": "13915",
+                    "MonitoredVehicleJourney": {
+                        "LineRef": "N",
+                        "DirectionRef": "IB",
+                        "FramedVehicleJourneyRef": {
+                            "DataFrameRef": "2023-01-21",
+                            "DatedVehicleJourneyRef": "11093383"
+                        },
+                        "PublishedLineName": "JUDAH",
+                        "OperatorRef": "SF",
+                        "OriginRef": "15223",
+                        "OriginName": "Judah/La Playa/Ocean Beach",
+                        "DestinationRef": "15239",
+                        "DestinationName": "Caltrain/Ballpark",
+                        "Monitored": true,
+                        "InCongestion": null,
+                        "VehicleLocation": {
+                            "Longitude": "-122.484016",
+                            "Latitude": "37.7613983"
+                        },
+                        "Bearing": "87.0000000000",
+                        "Occupancy": "seatsAvailable",
+                        "VehicleRef": "1527",
+                        "MonitoredCall": {
+                            "StopPointRef": "13915",
+                            "StopPointName": "Carl St & Stanyan St",
+                            "VehicleLocationAtStop": "",
+                            "VehicleAtStop": "false",
+                            "AimedArrivalTime": "2023-01-21T18:52:19Z",
+                            "ExpectedArrivalTime": "2023-01-21T18:54:20Z",
+                            "AimedDepartureTime": "2023-01-21T18:52:19Z",
+                            "ExpectedDepartureTime": null,
+                            "Distances": ""
+                        }
+                    }
+                },
+                {
+                    "RecordedAtTime": "1970-01-01T00:00:00Z",
+                    "MonitoringRef": "13915",
+                    "MonitoredVehicleJourney": {
+                        "LineRef": "N",
+                        "DirectionRef": "IB",
+                        "FramedVehicleJourneyRef": {
+                            "DataFrameRef": "2023-01-21",
+                            "DatedVehicleJourneyRef": "11093384"
+                        },
+                        "PublishedLineName": "JUDAH",
+                        "OperatorRef": "SF",
+                        "OriginRef": "15223",
+                        "OriginName": "Judah/La Playa/Ocean Beach",
+                        "DestinationRef": "15239",
+                        "DestinationName": "Caltrain/Ballpark",
+                        "Monitored": true,
+                        "InCongestion": null,
+                        "VehicleLocation": {
+                            "Longitude": "",
+                            "Latitude": ""
+                        },
+                        "Bearing": null,
+                        "Occupancy": null,
+                        "VehicleRef": null,
+                        "MonitoredCall": {
+                            "StopPointRef": "13915",
+                            "StopPointName": "Carl St & Stanyan St",
+                            "VehicleLocationAtStop": "",
+                            "VehicleAtStop": "",
+                            "AimedArrivalTime": "2023-01-21T19:04:19Z",
+                            "ExpectedArrivalTime": "2023-01-21T19:07:34Z",
+                            "AimedDepartureTime": "2023-01-21T19:04:19Z",
+                            "ExpectedDepartureTime": null,
+                            "Distances": ""
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

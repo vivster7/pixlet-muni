@@ -2,7 +2,6 @@
 
 install:
    	pixlet || curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.24.0/pixlet_0.24.0_linux_arm64.tar.gz && mv pixlet_0.24.0_linux_arm64.tar.gz /tmp/. && tar -xvf /tmp/pixlet_0.24.0_linux_arm64.tar.gz && chmod +x chmod +x /tmp/pixlet && sudo mv pixlet /usr/local/bin/.
-	fly || curl -L https://fly.io/install.sh | sh
 
 .PHONY: build
 

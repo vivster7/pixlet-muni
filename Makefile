@@ -1,7 +1,7 @@
 .PHONY: install
 
 install:
-   	pixlet || curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.24.0/pixlet_0.24.0_linux_arm64.tar.gz && mv pixlet_0.24.0_linux_arm64.tar.gz /tmp/. && tar -xvf /tmp/pixlet_0.24.0_linux_arm64.tar.gz && chmod +x chmod +x /tmp/pixlet && sudo mv pixlet /usr/local/bin/.
+   	pixlet || curl -LO https://github.com/tidbyt/pixlet/releases/download/v0.24.0/pixlet_0.24.0_linux_arm64.tar.gz && tar -xvf pixlet_0.24.0_linux_arm64.tar.gz && chmod +x pixlet && sudo install pixlet /usr/local/bin/
 
 .PHONY: build
 
@@ -11,7 +11,12 @@ build:
 .PHONY: run
 
 run:
-	pixlet render pixlet-muni.star api_key="1" api_key="2"
+	pixlet render pixlet-muni.star api_key="" api_key_2=""
+
+.PHONY: push
+	run
+	pixlet push hopelessly-fast-exuberant-tuatara-454 pixlet-muni.webp -t "<tidbyt-api-token>"
+
 
 # .PHONY: deploy
 # https://app.airplane.dev UI

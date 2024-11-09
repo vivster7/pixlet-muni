@@ -1,6 +1,6 @@
 FROM golang:1.19-alpine3.17
 RUN apk add git libwebp libwebp-dev alpine-sdk
-RUN git clone https://github.com/tidbyt/pixlet &&\
+RUN git clone --depth 1 -b v0.24.0 https://github.com/tidbyt/pixlet &&\
     cd pixlet &&\
     make build &&\
     cp pixlet /bin/pixlet &&\

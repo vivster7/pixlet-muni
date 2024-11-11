@@ -6,14 +6,14 @@ install:
 .PHONY: build
 
 build:
-	docker build -t vivster7/pixlet-muni:amd-full-2 --platform linux/amd64 .
+	docker build -t vivster7/pixlet-muni:arm-full-2 --platform linux/arm64 .
 
 .PHONY: docker-run
 
 docker-run:
 	$(MAKE) build
 	# Consider adding a bind mount ()'-v $PWD/tmp:/go/tmp') to debug
-	docker run --platform linux/amd64 -it --rm vivster7/pixlet-muni:amd-full-2 pixlet render pixlet-muni.star api_key="" api_key_2=""
+	docker run --platform linux/arm64 -it --rm vivster7/pixlet-muni:arm-full-2 pixlet render pixlet-muni.star api_key="" api_key_2=""
 	
 .PHONY: run
 

@@ -1,0 +1,13 @@
+image:
+  repository: vivster7/pixlet-muni
+  tag: amd-full-2
+
+# These will be overridden by actual secrets by values-secret.yaml
+apiKey: ""
+apiKey2: ""
+tidbytToken: ""
+
+# Example values-secret.yaml file
+# apiKey: "your-api-key"
+# apiKey2: "your-api-key-2"
+# tidbytToken: "your-tidbyt-token"

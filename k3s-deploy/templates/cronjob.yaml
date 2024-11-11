@@ -1,0 +1,42 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: {{ .Release.Name }}-updater
+spec:
+  schedule: "*/1 * * * *"
+  failedJobsHistoryLimit: 1    # Keep only 1 failed job
+  successfulJobsHistoryLimit: 3 # Keep 3 successful jobs
+  concurrencyPolicy: Replace   # Replace currently running job if new one is due
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: pixlet-muni
+            image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+            env:
+            - name: API_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: api_key
+            - name: API_KEY_2
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: api_key_2
+            - name: TIDBYT_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: {{ .Release.Name }}-secrets
+                  key: tidbyt_token
+            command:
+            - /bin/sh
+            - -c
+            - |
+              echo "Starting pixlet render..." && \
+              pixlet render pixlet-muni.star api_key="$API_KEY" api_key_2="$API_KEY_2" && \
+              echo "Render successful, starting push..." && \
+              pixlet push misleadingly-trusting-apposite-monarch-355 pixlet-muni.webp -t "$TIDBYT_TOKEN" && \
+              echo "Push completed successfully" || echo "Failed to complete pixlet operations"
+          restartPolicy: OnFailure

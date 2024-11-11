@@ -28,8 +28,8 @@ def get_schema():
 
 ## DATA
 
-OUTBOUND_PREDICTIONS_URL = "https://api.511.org/transit/StopMonitoring?api_key=%s&agency=SF&stopcode=13914&format=JSON"
-INBOUND_PREDICTIONS_URL = "https://api.511.org/transit/StopMonitoring?api_key=%s&agency=SF&stopcode=13915&format=JSON"
+INBOUND_PREDICTIONS_URL = "https://api.511.org/transit/StopMonitoring?api_key=%s&agency=SF&stopcode=13911&format=JSON"
+OUTBOUND_PREDICTIONS_URL = "https://api.511.org/transit/StopMonitoring?api_key=%s&agency=SF&stopcode=13909&format=JSON"
 
 def fetch_cached(url, ttl):
     cached = cache.get(url)
@@ -113,8 +113,8 @@ def transit_info_row(data):
 def main(config):
     api_key = config.str("api_key")
     api_key_2 = config.str("api_key_2")
-
     inbound_data = fetch_cached(INBOUND_PREDICTIONS_URL % api_key, 60)
+
     outbound_data = fetch_cached(OUTBOUND_PREDICTIONS_URL % api_key_2, 60)
 
     inbound_data = transform_data(inbound_data)
